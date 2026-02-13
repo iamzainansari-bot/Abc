@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sadia Faiz ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#1a0000,#660000,#cc0000);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+margin-top:60px;
+animation:fadeIn 2s ease-in-out;
+}
+
+img{
+width:240px;
+border-radius:20px;
+box-shadow:0 0 40px rgba(255,0,0,0.8);
+border:3px solid white;
+}
+
+h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+h2{
+color:#ffd6d6;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff0000,#ff4d4d);
+color:white;
+cursor:pointer;
+box-shadow:0 0 20px red;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px white;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.float{
+position:absolute;
+font-size:30px;
+animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+from{transform:translateY(100vh);opacity:1;}
+to{transform:translateY(-10vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ Sadia Faiz ❤️</h1>
+
+<h2>Happy Valentine's Day My Love 🌹</h2>
+
+<img src="sadia.jpg">
+
+<br><br>
+
+<button onclick="next()">Open My Heart 💌</button>
+
+</div>
+
+<script>
+
+function next(){
+window.location.href="memory.html";
+}
+
+const items=["❤️","🌹","🌸","🍫","🧸"];
+
+setInterval(()=>{
+let el=document.createElement("div");
+el.className="float";
+el.innerHTML=items[Math.floor(Math.random()*items.length)];
+el.style.left=Math.random()*100+"vw";
+document.body.appendChild(el);
+setTimeout(()=>el.remove(),6000);
+},300);
+
+</script>
+
+</body>
+</html>
