@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Feelings ❤️</title>
+
+<style>
+body{
+background:linear-gradient(135deg,#330000,#990000);
+color:white;
+font-family:'Segoe UI';
+text-align:center;
+}
+
+.box{
+margin-top:120px;
+font-size:28px;
+padding:20px;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:30px;
+background:red;
+color:white;
+cursor:pointer;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="text"></div>
+
+<button onclick="next()">See Your Gifts 🎁</button>
+
+<script>
+
+let msg="You are my happiness, my peace, and my forever love Sadia ❤️🌹";
+let i=0;
+
+function type(){
+if(i<msg.length){
+document.getElementById("text").innerHTML+=msg.charAt(i);
+i++;
+setTimeout(type,50);
+}
+}
+
+type();
+
+function next(){
+window.location.href="gift.html";
+}
+
+</script>
+
+</body>
+</html>
